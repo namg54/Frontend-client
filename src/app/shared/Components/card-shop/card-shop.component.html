@@ -1,0 +1,34 @@
+<div class="col h-100" *ngIf="!mobileSize">
+  <div class="card shadow-sm h-100">
+    <img [src]="product?.pictureUrl" class="img-thumbnail w-100" />
+    <div class="card-body">
+      <p class="card-text">{{ product?.title }}</p>
+      <div class="d-flex justify-content-between align-items-center col-custom">
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-outline-success"><span class="fas fa-shopping-basket"></span></button>
+          <button type="button" class="btn btn-sm btn-outline-danger"><span class="fas fa-eye"></span></button>
+        </div>
+        <small class="text-body-secondary price-cell">{{ product.price | number }} تومان </small>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Mobile Size Codition -->
+<div class="row row-mobilesize pt-0.2" *ngIf="mobileSize">
+  <div class="col-5 h-100 pb-1">
+      <img [src]="product?.pictureUrl" class="card shadow-sm h-100 img-thumbnail w-100 h-100" />
+  </div>
+  <div class="col-7">
+      <div>
+        <p class="card-text card-text-mobile">{{ product?.title }}</p>
+      </div>
+      <div class="d-flex justify-content-between">
+        <div class="btn-group pb-1 pt-1 mr-5">
+          <button type="button" class="btn btn-sm btn-outline-success"><span class="fas fa-shopping-basket"></span></button>
+          <button type="button" class="btn btn-sm btn-outline-danger"><span class="fas fa-eye"></span></button>
+        </div>
+        <small class="text-body-secondary align-self-center">{{ product.price | number }} تومان </small>
+      </div>
+  </div>
+  </div>
+

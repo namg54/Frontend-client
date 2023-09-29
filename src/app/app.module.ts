@@ -1,8 +1,12 @@
+//base
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
+import {HttpClientModule} from "@angular/common/http";
+
+//Components
 import { AppComponent } from './app.component';
+//Modules
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 
@@ -14,7 +18,8 @@ import { CoreModule } from './core/core.module';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    CoreModule
+    CoreModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
